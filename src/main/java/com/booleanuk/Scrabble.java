@@ -33,8 +33,7 @@ public class Scrabble {
             } else if (current == '}') {
                 if (i < 2) {
                     return 0;
-                }
-                else if (word.charAt((i - 2)) == '{') {
+                } else if (word.charAt((i - 2)) == '{') {
                     isLetterDouble = false;
 
                 } else if (!isWordDouble) {
@@ -52,15 +51,14 @@ public class Scrabble {
             } else if (current == ']') {
                 if (i < 2) {
                     return 0;
-                }
-                else if (word.charAt((i - 2)) == '[') {
+                } else if (word.charAt((i - 2)) == '[') {
                     isLetterTriple = false;
                 } else if (!isWordTriple) {
                     return 0;
                 }
             } else {
                 int letterScore = scoreMap.getOrDefault(current, -1);
-                if (letterScore == -1 ) {
+                if (letterScore == -1) {
                     return 0;
                 }
 
